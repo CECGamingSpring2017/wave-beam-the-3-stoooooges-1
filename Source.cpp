@@ -121,18 +121,14 @@ int main()
 			//move beam while space is being pressed
 
 			if (shootBeam) {
-
-				////////////////////////////////////////////////////////////////
-
+				beam_x = ship_x + t;
+				////equation for beam////////////////////////////////////////////////////////////
 				//LOOK! LOOK! Here's where you can change the path of the beam!
 
-				beam_x = ship_x + t * 2 + 16;
-
-				beam_y = ship_y + 10 * sin(.5*t) + 16;
-
+				beam_y = ship_y + 20 * sin(.25 *(beam_x+=20)) + 16;
 				////////////////////////////////////////////////////////////////
 
-				t++; //increase parameter
+				t++; //increase time
 
 				cout << "beam being fired" << endl;
 
